@@ -1,0 +1,37 @@
+model pr7
+parameter Real a = 0.83;
+parameter Real b = 0.00013;
+parameter Real N = 885;
+
+Real n(start=3);
+
+equation
+  der(n) = (a+b*n) * (N-n);
+  
+end pr7;
+
+
+model pr7
+parameter Real a = 0.000024;
+parameter Real b = 0.29;
+parameter Real N = 885;
+
+Real n(start=3);
+
+equation
+  der(n) = (a+b*n) * (N-n);
+  
+end pr7;
+
+
+model pr7
+parameter Real a = 0.5;
+parameter Real b = 0.3;
+parameter Real N = 885;
+
+Real n(start=3);
+
+equation
+  der(n) = (a*time+b*time*n) * (N-n);
+  
+end pr7;
